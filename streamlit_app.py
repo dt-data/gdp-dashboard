@@ -3,7 +3,8 @@ import pandas as pd
 import json
 
 # Define the path to your JSON file
-json_file_path = "data/ratings.json"
+json_file_path = "data/targets.json"
+title = 'Target Editor'
 
 # Read the JSON file into a DataFrame
 def read_json_to_dataframe(file_path):
@@ -18,7 +19,7 @@ def write_dataframe_to_json(dataframe, file_path):
         json.dump(dataframe.to_dict(orient="records"), file, indent=2)
 
 # Main Streamlit app
-st.title("Recipe Editor")
+st.title(title)
 
 # Load the data into a DataFrame
 df = read_json_to_dataframe(json_file_path)
