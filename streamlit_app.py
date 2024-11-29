@@ -106,6 +106,8 @@ filtered_gdp_df = gdp_df[
     & (from_year <= gdp_df['Year'])
 ]
 
+st.write(filtered_gdp_df)
+
 st.header('GDP over time', divider='gray')
 
 ''
