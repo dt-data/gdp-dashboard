@@ -116,6 +116,8 @@ chart = alt.Chart(filtered_gdp_df).mark_line().encode(
     color='Country Code:N'  # Color by country
 )
 
+st.altair_chart(chart, use_container_width=True)
+
 ''
 ''
 
