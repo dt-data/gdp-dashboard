@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 import json
-import numpy as np
-import re
 
 # Define the path to your JSON file
 json_file_path = "data/ratings.json"

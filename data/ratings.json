@@ -11,12 +11,12 @@
   },
   {
     "recipe_name": "Smartie Cookies",
-    "rating": NaN,
+    "rating": -1.0,
     "last_created": "2024-11-29"
   },
   {
     "recipe_name": "Smores",
-    "rating": NaN,
+    "rating": -1.0,
     "last_created": "2024-11-29"
   }
 ]
