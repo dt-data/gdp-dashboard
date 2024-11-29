@@ -25,7 +25,7 @@ st.title(title)
 df = read_json_to_dataframe(json_file_path)
 
 # Display the DataFrame in Streamlit's data_editor
-edited_df = st.data_editor(df, num_rows="dynamic")
+edited_df = st.data_editor(df, num_rows="dynamic", sortable=True)
 
 # Button to save changes
 if st.button("Save Changes"):
