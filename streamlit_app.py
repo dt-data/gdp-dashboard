@@ -20,9 +20,6 @@ def write_dataframe_to_json(dataframe, file_path):
     with open(file_path, "w") as file:
         json.dump(dataframe.to_dict(orient="records"), file, indent=2)
 
-def prettify_column_name(column_name):
-    return re.sub(r'(_)', ' ', column_name).title()
-
 # Main Streamlit app
 st.title("Recipe Editor")
 
@@ -34,8 +31,7 @@ if 'rating' in df.columns:
     df['rating'] = pd.to_numeric(df['rating'], errors='coerce')
 
 # Display the DataFrame in Streamlit's data_editor
-prettified_columns = [re.sub(r'(_)', ' ', col).title() for col in df.columns]
-edited_df = st.data_editor(df, num_rows="dynamic", column_config=prettified_columns)
+edited_df = st.data_editor(df, num_rows="dynamic")
 
 # Button to save changes
 if st.button("Save Changes"):
