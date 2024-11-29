@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import json
+import numpy as np
 
 # Define the path to your JSON file
 json_file_path = "data/ratings.json"
@@ -13,6 +14,8 @@ def read_json_to_dataframe(file_path):
 
 # Write the DataFrame back to the JSON file
 def write_dataframe_to_json(dataframe, file_path):
+    # Replace NaN with None to ensure valid JSON
+    dataframe = dataframe.where(pd.notnull(dataframe), None)
     with open(file_path, "w") as file:
         json.dump(dataframe.to_dict(orient="records"), file, indent=2)
 
