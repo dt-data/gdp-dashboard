@@ -93,7 +93,7 @@ selected_countries = st.multiselect(
     'Which countries would you like to view?',
     countries,
     ['AU','NZ']
-
+)
 ''
 ''
 ''
