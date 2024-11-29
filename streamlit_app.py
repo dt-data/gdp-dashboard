@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import altair as alt
 import math
 from pathlib import Path
 
@@ -109,11 +110,10 @@ st.header('GDP over time', divider='gray')
 
 ''
 
-st.line_chart(
-    filtered_gdp_df,
-    x='Year',
-    y='GDP',
-    color='Country Code',
+chart = alt.Chart(filtered_gdp_df).mark_line().encode(
+    x='Year:O',           # Treat year as ordinal
+    y='GDP:Q',            # Quantitative axis for GDP
+    color='Country Code:N'  # Color by country
 )
 
 ''
