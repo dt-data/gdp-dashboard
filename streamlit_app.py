@@ -35,7 +35,7 @@ if 'rating' in df.columns:
 
 # Display the DataFrame in Streamlit's data_editor
 prettified_columns = [re.sub(r'(_)', ' ', col).title() for col in df.columns]
-edited_df = st.data_editor(df, num_rows="dynamic", columns=prettified_columns)
+edited_df = st.data_editor(df, num_rows="dynamic", column_config=prettified_columns)
 
 # Button to save changes
 if st.button("Save Changes"):
