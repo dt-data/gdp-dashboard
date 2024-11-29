@@ -1,18 +1,17 @@
 [
-    {
-      "recipe_name": "Smartie Cookies",
-      "rating": 4.6,
-      "last_created": "2024-11-20T15:00:00"
-    },
-    {
-      "recipe_name": "Double Choc Loaded Cookies",
-      "rating": 4.8,
-      "last_created": "2024-10-12T10:30:00"
-    },
-    {
-      "recipe_name": "Peanut Butter Cookies",
-      "rating": 4.7,
-      "last_created": "2024-09-30T12:45:00"
-    }
+  {
+    "recipe_name": "Double Choc Loaded Cookies",
+    "rating": 4.8,
+    "last_created": "2024-11-15"
+  },
+  {
+    "recipe_name": "Peanut Butter Loaded Cookies",
+    "rating": 3.7,
+    "last_created": "2024-11-02"
+  },
+  {
+    "recipe_name": null,
+    "rating": NaN,
+    "last_created": null
+  }
 ]
-  

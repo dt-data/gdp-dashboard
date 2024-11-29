@@ -22,6 +22,10 @@ st.title("Recipe Editor")
 # Load the data into a DataFrame
 df = read_json_to_dataframe(json_file_path)
 
+# Ensure 'rating' column can handle blanks
+if 'rating' in df.columns:
+    df['rating'] = pd.to_numeric(df['rating'], errors='coerce')
+
 # Display the DataFrame in Streamlit's data_editor
 edited_df = st.data_editor(df, num_rows="dynamic")
 
